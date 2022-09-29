@@ -1,18 +1,19 @@
 var state = {
-	height_mode: "auto",
-	margin_top: 5,
+	height_mode: "fill_space",
+	margin_top: 0,
 	margin_right: 5,
 	margin_right_mobile: 5,
 	margin_bottom: 0,
-	margin_left: 5,
+	margin_left: 20,
 
-	zoom_enabled: false,
-	zoom_steps_to_show: 3,
-	zoom_y_axis: false,
+	zoom_enabled: true,
+	zoom_steps_to_show: 10,
+	zoom_y_axis: true,
 	zoom_y_padding: 20,
 
-	color: {},
-
+	color: {
+		custom_palette: "Doppletronica: #FFFFFF\nSamwise415: #FFFFFF\nNpPro93: #FFFFFF\nRicky: #99AFE8\nIWannaBeThePie: #FFFFFF\nJumpyluff: #8D8D8D\nEyeOf_Newt: #918ACD\ndha: #EF823D\ndtm: #980898\nBurnsy: #34ABDE\nPeterAfro: #EE3333\nfritzakids: #B269D5\nLukePlays: #845FD9\nMokasa: #04A866\nSJFzone: #CC6EA3\nVibronik: #04A866\nLieutenant_Boo: #5656DE\nWishengrad: #82C149\nLuciousness: #4580DE\nghostd_then_a_period: #D069C9\nkrakow: #9C9C9C\nOhCarter: #04A866\n"
+	},
 	start_circle_r: 5,
 	end_circle_r: 20,
 	end_circle_stroke: 4,
@@ -20,19 +21,21 @@ var state = {
 	circle_space_between: 30,
 	horse_images: true,
 	hide_labels: false,
-	label_font_size: 12,
+	label_font_size: 20,
 	label_color_mode: "auto",
 	label_color: "#808080",
-	rank_font_size: 14,
-	rank_outside_picture: true,
+	rank_font_size: 0,
+	rank_outside_picture: false,
+	text_legend_bold: true,
+
 
 	line_opacity: 1,
-	line_width: 5,
-	curve: "curveLinear",
+	line_width: 4,
+	curve: "curveMonotoneX",
 
 	shade: true,
-	shade_opacity: 0.1,
-	shade_width: 20,
+	shade_opacity: 0.3,
+	shade_width: 10,
 
 	missing: false,
 	missing_opacity: 1,
@@ -40,18 +43,18 @@ var state = {
 	missing_dash_space: 4,
 	missing_width: 1.5,
 
-	stage_duration: 1500,
-	update_duration: 500,
+	stage_duration: 1400,
+	update_duration: 1400,
 
 	label_ranks: "Ranks",
 	label_scores: "Scores",
 	label_replay: "Replay",
 
-	value_type: "ranks",
-	higher_scores_win: true,
+	value_type: "scores",
+	higher_scores_win: false,
 	ties_mode: "competition",
-	show_buttons: true,
-	show_replay: true,
+	show_buttons: false,
+	show_replay: false,
 
 	target_position: null,
 
@@ -64,11 +67,11 @@ var state = {
 	y_axis_min_rank: null,
 	y_axis_max_rank: null,
 	y_axis_label_colors: "#808080",
-	y_axis_label_size: 11,
-	y_axis_stroke_color: "#e0e1e1",
+	y_axis_label_size: 18,
+	y_axis_stroke_color: "#323434",
 
 	y_axis_format: {
-		suffix: "%"
+		suffix: " Minutes"
 	},
 
 	header_title: "",
@@ -86,13 +89,16 @@ var state = {
 	localization: {},
 	label_format: {},
 
-	layout: {},
+	layout: {
+		background_color_enabled: true,
+		background_color: "#000000"
+	},
 
 	// x axis
 	x_axis_label_color: "#808080",
-	x_axis_label_size: 11,
+	x_axis_label_size: 18,
 	x_axis_rotate: "45",
-	x_axis_show_hidden: false
+	x_axis_show_hidden: false,
 };
 
 export default state;

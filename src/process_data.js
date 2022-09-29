@@ -55,6 +55,7 @@ function getProcessedData() {
 
 		// Pull out the names and raw scores
 		filtered_horses.forEach(function(horse, horse_index) {
+			//console.log(horse.pic);
 			if (horse.stages[stage_index] === undefined) return;
 			var stage = horse.stages[stage_index],
 			    score = stage == "" || isNaN(parser(stage)) ? null : parser(stage);
@@ -91,6 +92,11 @@ function getProcessedData() {
 	var horses = filtered_horses.map(function(horse, horse_index) {
 		var missing_value = null;
 		horse.ranks = horse.stages.map(function(stage, stage_index) {
+			//if(timeslices[stage_index][horse_index].rank == 1) {
+			//	console.log(timeslices[stage_index][horse_index].color + " " + stage_index);
+			//}
+					//console.log(data.horserace.column_names.stages);
+					//console.log(timeslices[stage_index][horse_index].pic);
 			return timeslices[stage_index][horse_index].rank;
 		});
 		horse.line = horse.stages.map(function(stage, stage_index) {
@@ -129,5 +135,19 @@ function getProcessedData() {
 	horses.timeslices = timeslices;
 	return horses;
 }
+
+/*
+function foo(){
+	context = {
+		'var1': 12,
+		'var2': 21
+    }
+    $.ajax({
+		url:'/pyfoo',
+		type: 'POST',
+		data: context
+	});
+}
+*/
 
 export { getProcessedData, localization, parser };

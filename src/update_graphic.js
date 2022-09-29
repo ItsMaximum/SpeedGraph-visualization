@@ -223,7 +223,7 @@ function updateLabels(duration) {
 		.attr("alignment-baseline", "central").attr("dominant-baseline", "central");
 	labels_enter.selectAll(".name-fg, .name-bg").append("tspan").attr("class", "name-rank")
 		.attr("font-weight", "bold");
-	labels_enter.selectAll(".name-fg, .name-bg").append("tspan").attr("class", "name-label");
+	labels_enter.selectAll(".name-fg, .name-bg").append("tspan").attr("class", "name-label").attr("font-weight", "bold");
 	labels_update = labels.merge(labels_enter);
 	labels_update
 		.attr("fill", function(d) {
